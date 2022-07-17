@@ -1,8 +1,7 @@
-const App: React.FC = () => {
-  return (
-    <div>hello world</div>
-    // 스태시 -> 잠시 임시보관소에 저장
-  );
-};
+import React from 'react'
 
-export default App;
+const App: React.FC = () => {
+  return <div>hello world</div>
+}
+
+export default App
