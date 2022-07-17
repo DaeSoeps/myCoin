@@ -1,34 +1,3 @@
-// const path = require("path")
-
-// module.exports = {
-//   entry: "./src/index.tsx",
-//   output: {
-//     publicPath: "/",
-//     path: path.resolve(__dirname, "/dist"),
-//     filename: "bundled.js"
-//   },
-//   mode: "development",
-//   devtool: "source-map",
-//   devServer: {
-//     port: 3000,
-//     hot: true,
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.js$/,
-//         exclude: /(node_modules)/,
-//         use: {
-//           loader: "babel-loader",
-//           options: {
-//             presets: ["@babel/preset-react", ["@babel/preset-env", { targets: { node: "14" } }]]
-//           }
-//         }
-//       }
-//     ]
-//   }
-// }
-
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const webpack = require('webpack');
@@ -44,6 +13,14 @@ module.exports = (env, argv) => {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.js",
     publicPath: '/',
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "/dist"),
+    publicPath: "/",
+    overlay: true,
+    port: 8080,
+    // stats: "errors-only",
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
