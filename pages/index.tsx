@@ -1,7 +1,8 @@
 import React from 'react'
+import App from './_app';
 
 function index() {
-  return <div>안녕하세요</div>
+  return <App></App>
 }
 
 export default index
