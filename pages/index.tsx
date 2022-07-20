@@ -1,8 +1,8 @@
+import HomeContainer from 'container/HomeContainer';
 import React from 'react'
-import App from './_app';
 
-function index() {
-  return <App></App>
+const index = () => {
+  return <HomeContainer/>
 }
 
 export default index

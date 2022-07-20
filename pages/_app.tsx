@@ -1,12 +1,15 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
-import HomeContainer from 'container/HomeContainer';
-
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../styles/theme';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Component {...pageProps}>
-        <HomeContainer/>
-    </Component>
+    <>
+      <ThemeProvider theme={ theme } >
+        <Component {...pageProps}>
+        </Component>
+      </ThemeProvider>
+    </>
   )
 }
 
