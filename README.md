@@ -22,9 +22,8 @@ TODO LIST
 
 ## SKills
 
-# SongPod
+## SongPod
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DaeSoeps)](https://github.com/DaeSoeps/github-readme-stats)
 
-# ZitNad
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sihwann)](https://github.com/
-sihwann/github-readme-stats)
+## ZitNad
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sihwann)](https://github.com/sihwann/github-readme-stats)
