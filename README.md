@@ -1,6 +1,6 @@
 # Toy Project - myCoin
- > React, TypeScript, Redux toolkit 을 이용한 비트코인 클론코딩
-
+ > React, TypeScript, Redux toolkit 을 이용한 업비트 클론코딩
+ > 개발인원 2명, 자율적으로 개발 진행
 
 
 ## 📆 프로젝트 기간
