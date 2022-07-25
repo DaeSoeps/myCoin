@@ -7,17 +7,17 @@ README 로 위 내용을 옮길 예정
 
 TODO LIST
 
-## 화면 개발
+## 💻 화면 개발
 1. 즐겨찾기한 코인 목록 화면 - DSS
 2. 최근 변동이 심한 코인 목록 화면 - KSW
 ...etc
 
-## 기능개발
+## 🔨 기능개발
 1. 로그인/로그아웃 - ?
 2. 즐겨찾기 - ?
 ...etc
 
-## 유지보수
+## 👀 유지보수
 1. 분산 버전 관리 - 상태관리 라이브러리 변경 시 추가예정 (Redux-toolkit - > Recoil)
 
 ## 📚 Tech Stack
@@ -27,7 +27,7 @@ TODO LIST
     <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 </div>
 
-## Contributors Skills
+## 🙋 Contributors Skills
 ## SongPod
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DaeSoeps)](https://github.com/DaeSoeps/github-readme-stats)
 
