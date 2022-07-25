@@ -1,13 +1,9 @@
 # Toy Project - myCoin
  > React, TypeScript, Redux toolkit 을 이용한 비트코인 클론코딩
 
-프로젝트 개요 : https://dssong.notion.site/3bbb3f5a2f64477bb580d7f2ca4ff0be
 
-README 로 위 내용을 옮길 예정
 
-TODO LIST
-
-## 프로젝트 기간
+## 📆 프로젝트 기간
 - 2022-07-06 부터 최대 3달간 진행 예정
 - 일일 예상 개발 시간 : 20분 ~ n시간
 
