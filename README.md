@@ -1,4 +1,4 @@
-# myCoin
+# Toy Project - myCoin
  > React, TypeScript, Redux toolkit 을 이용한 비트코인 클론코딩
 
 프로젝트 개요 : https://dssong.notion.site/3bbb3f5a2f64477bb580d7f2ca4ff0be
@@ -22,7 +22,7 @@ TODO LIST
 
 ## Tech Stack
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-<img src="https://img.shields.io/badge/redux-#764ABC?style=for-the-badge&logo=redux&logoColor=black">
+<img src="https://img.shields.io/badge/Redux-#764ABC?style=for-the-badge&logo=Redux&logoColor=black">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
 
 ## Contributors Skills
