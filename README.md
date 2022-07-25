@@ -20,8 +20,10 @@ TODO LIST
 ## 유지보수
 1. 분산 버전 관리 - 상태관리 라이브러리 변경 시 추가예정 (Redux-toolkit - > Recoil)
 
-## SKills
+## Stack
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white"/>
 
+## Contributors Skills
 ## SongPod
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DaeSoeps)](https://github.com/DaeSoeps/github-readme-stats)
 
