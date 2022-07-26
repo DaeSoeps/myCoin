@@ -1,7 +1,5 @@
 # Toy Project - myCoin
  > React, TypeScript, Redux toolkit 을 이용한 업비트 클론코딩
- > 개발인원 2명, 자율적으로 개발 진행
-
 
 ## 📆 프로젝트 기간
 - 2022-07-06 부터 최대 3달간 진행 예정
