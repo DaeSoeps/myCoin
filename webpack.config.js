@@ -31,6 +31,17 @@ module.exports = (env, argv) => {
         test: /\.tsx?$/,
         use: ["babel-loader", "ts-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options:{
+              esModule: false,
+            },
+          },
+        ],
+      }
     ],
   },
 
