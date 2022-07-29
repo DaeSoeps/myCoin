@@ -1,8 +1,8 @@
-import HomeContainer from 'container/HomeContainer';
 import React from 'react'
+import Home from 'layouts/home'
 
-const index = () => {
-  return <HomeContainer/>
+const HomePage = () => {
+  return <Home>안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요</Home>
 }
 
-export default index
+export default HomePage
