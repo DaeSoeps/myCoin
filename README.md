@@ -1,15 +1,19 @@
 # Toy Project - myCoin
- > React, TypeScript, Redux toolkit 을 이용한 업비트 클론코딩
+
+> React, TypeScript, Redux toolkit 을 이용한 업비트 클론코딩
 
 ## 📆 프로젝트 기간
+
 - 2022-07-06 부터 최대 3달간 진행 예정
 - 일일 예상 개발 시간 : 20분 ~ n시간
 
 ## 💻 화면 개발
+
 - 즐겨찾기한 코인 목록 화면 - DSS
 - 최근 변동이 심한 코인 목록 화면 - KSW
 
 ## 🔨 기능개발
+
 - 로그인/로그아웃 - ?
 - 즐겨찾기 - ?
 - 차트(기간 조회, 하한&상한 표시) 및 차트 분석
@@ -18,9 +22,17 @@
 - 에니메이션(Twojs, 4D….)
 
 ## 👀 유지보수
+
 - 분산 버전 관리 - 상태관리 라이브러리 변경 시 추가예정 (Redux-toolkit - > Recoil)
 
+## 👀 Mini TODO
+
+- styled-components babel 설정
+- 자유롭게 할 수 있는 각자 테스트 페이지?
+- 코인 openApi 웹소켓 데이터 받기
+
 ## 📚 Tech Stack
+
 <div>
     <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
     <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white">
@@ -33,8 +45,11 @@
 </div>
 
 ## 🙋 Contributors Skills
+
 ## SongPod
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DaeSoeps)](https://github.com/DaeSoeps/github-readme-stats)
 
 ## ZitNad
+
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sihwann)](https://github.com/sihwann/github-readme-stats)
