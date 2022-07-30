@@ -1,13 +1,13 @@
 import React from 'react'
 import DefaultLayout from 'layouts/Default'
-import Home from 'components/Home'
+import Trend from 'components/Trend'
 
-const HomePage = () => {
+const TrendPage = () => {
   return (
     <DefaultLayout>
-      <Home name="~~님" mark="*" />
+      <Trend />
     </DefaultLayout>
   )
 }
 
-export default HomePage
+export default TrendPage

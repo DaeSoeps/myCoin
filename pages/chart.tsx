@@ -1,13 +1,13 @@
 import React from 'react'
 import DefaultLayout from 'layouts/Default'
-import Home from 'components/Home'
+import Chart from 'components/Chart'
 
-const HomePage = () => {
+const ChartPage = () => {
   return (
     <DefaultLayout>
-      <Home name="~~님" mark="*" />
+      <Chart />
     </DefaultLayout>
   )
 }
 
-export default HomePage
+export default ChartPage

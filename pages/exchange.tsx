@@ -1,13 +1,13 @@
 import React from 'react'
 import DefaultLayout from 'layouts/Default'
-import Home from 'components/Home'
+import Exchange from 'components/Exchange'
 
-const HomePage = () => {
+const ExchangePage = () => {
   return (
     <DefaultLayout>
-      <Home name="~~님" mark="*" />
+      <Exchange />
     </DefaultLayout>
   )
 }
 
-export default HomePage
+export default ExchangePage
