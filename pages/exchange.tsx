@@ -1,11 +1,11 @@
 import React from 'react'
 import DefaultLayout from 'layouts/Default'
-import Exchange from 'components/Exchange'
+import ExchangeA from 'components/ExchangeA'
 
 const ExchangePage = () => {
   return (
     <DefaultLayout>
-      <Exchange />
+      <ExchangeA />
     </DefaultLayout>
   )
 }

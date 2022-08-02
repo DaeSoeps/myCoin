@@ -1,6 +1,6 @@
 import React from 'react'
 import * as ST from './style'
-const Exchange = () => {
+const ExchangeA = () => {
   return (
     <>
       <ST.MainDiv>
@@ -25,4 +25,4 @@ const Exchange = () => {
   )
 }
 
-export default Exchange
+export default ExchangeA
