@@ -1,6 +1,6 @@
 # Toy Project - myCoin
 
-> React, TypeScript, Redux toolkit 을 이용한 업비트 클론코딩
+> React, TypeScript, Recoil 을 이용한 업비트 클론코딩
 
 ## 📆 프로젝트 기간
 
@@ -9,8 +9,10 @@
 
 ## 💻 화면 개발
 
-- 즐겨찾기한 코인 목록 화면 - DSS
-- 최근 변동이 심한 코인 목록 화면 - KSW
+- Home(메인) - 
+- 거래소A - SongPod
+- 거래소B - ZitNad
+- 투자내역 -
 
 ## 🔨 기능개발
 
@@ -23,13 +25,18 @@
 
 ## 👀 유지보수
 
-- 분산 버전 관리 - 상태관리 라이브러리 변경 시 추가예정 (Redux-toolkit - > Recoil)
+- 분산 버전 관리 - 상태관리 라이브러리 변경 시 추가예정 (Recoil - > Redux-toolkit)
 
 ## 👀 Mini TODO
 
 - styled-components babel 설정
 - 자유롭게 할 수 있는 각자 테스트 페이지?
 - 코인 openApi 웹소켓 데이터 받기
+
+## 🔨 현재 개발중인 부분
+
+- SongPod : 화면 개발 - 거래소A
+- ZitNad : 
 
 ## 📚 Tech Stack
 
