@@ -5,10 +5,6 @@ import Link from 'next/link'
 import { Container, HeadMenu, ImgMenu } from './style'
 
 const Header = () => {
-  const border = {
-    border: '1px solid black'
-  }
-
   return (
     <Container>
       <ImgMenu>
@@ -20,9 +16,16 @@ const Header = () => {
         </Link>
       </ImgMenu>
       <HeadMenu>
-        <Link href="/exchange">
+        <Link href="/exchangeA">
           <a>
-            <span>거래소</span>
+            <span>거래소A</span>
+          </a>
+        </Link>
+      </HeadMenu>
+      <HeadMenu>
+        <Link href="/exchangeB">
+          <a>
+            <span>거래소B</span>
           </a>
         </Link>
       </HeadMenu>

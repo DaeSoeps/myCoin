@@ -3,11 +3,7 @@ import DefaultLayout from 'layouts/Default'
 import Chart from 'components/Chart'
 
 const ChartPage = () => {
-  return (
-    <DefaultLayout>
-      <Chart />
-    </DefaultLayout>
-  )
+  return <Chart />
 }
 
 export default ChartPage
