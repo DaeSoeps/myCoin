@@ -2,7 +2,7 @@ import React from 'react'
 import DefaultLayout from 'layouts/Default'
 
 const sihwan = () => {
-  return <DefaultLayout>{'시환시환시환'}</DefaultLayout>
+  return <div>시환</div>
 }
 
 export default sihwan
