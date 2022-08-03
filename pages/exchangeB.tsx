@@ -1,8 +1,8 @@
 import React from 'react'
 import ExchangeB from 'components/ExchangeB'
 
-const ExchangePage = () => {
+const ExchangeBPage = () => {
   return <ExchangeB />
 }
 
-export default ExchangePage
+export default ExchangeBPage
