@@ -1,34 +1,41 @@
-// pages/_document.jsx
-import Document, { HTML, Head, Main, NextScript } from 'next/document'
+import Document, { DocumentContext } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    // Step 1: Create an instance of ServerStyleSheet
+  static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-    // Step 2: Retrieve styles from components in the page
-    const page = renderPage((App) => (props) => sheet.collectStyles(<App {...props} />))
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App: any) => (props: any) => sheet.collectStyles(<App {...props} />)
+        })
 
-    // Step 3: Extract the styles as <style> tags
-    const styleTags = sheet.getStyleElement()
-
-    // Step 4: Pass styleTags as a prop
-    return { ...page, styleTags }
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        )
+      }
+    } finally {
+      sheet.seal()
+    }
   }
 
   render() {
     return (
-      <HTML>
-        <Head>
-          {/* Step 5: Output the styles in the head  */}
-          {this.props.styleTags}
-        </Head>
+      <Html>
+        <Head>/* meta, font등 설정 */</Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </HTML>
+      </Html>
     )
   }
 }
