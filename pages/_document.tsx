@@ -1,21 +1,27 @@
-// pages/_document.jsx
-import Document, { HTML, Head, Main, NextScript } from 'next/document'
+import React, { ReactElement } from "react";
+import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components'
 
-export default class MyDocument extends Document {
-  static async getInitialProps({ ctx }) {
-    const sheet = new ServerStyleSheet()
+// https://wonit.tistory.com/369 Styled Compnent 이슈
 
-    const originalRenderPage =  ctx.renderPage;
+/*
+  타입스크립트는 타입에러 떄문에 이렇게 해줘야함 
+  https://www.angularfix.com/2021/09/how-to-properly-type-documenttsx-file.html
+*/
+
+export default class MyDocument extends Document {
+
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
 
     try {
       ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(
-              (<App {...props} />),
-            ),
-        });
+      originalRenderPage({
+        enhanceApp: (App) => (props) =>
+          sheet.collectStyles(<App {...props} />),
+      });
+
       const initialProps = await Document.getInitialProps(ctx);
       return {
         ...initialProps,
@@ -34,9 +40,9 @@ export default class MyDocument extends Document {
   }
   
 
-  render() {
+  render(): ReactElement {
     return (
-      <HTML>
+      <Html>
         <Head>
           {/* Step 5: Output the styles in the head  */}
           {/* {this.props.styleTags} */}
@@ -45,7 +51,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </HTML>
+      </Html>
     )
   }
 }
