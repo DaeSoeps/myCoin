@@ -1,4 +1,13 @@
+import React from 'react'
 import styled from 'styled-components'
+
+const Footer = () => {
+  return (
+    <Container>
+      <Title>Made By ZitNad & SongPod</Title>
+    </Container>
+  )
+}
 
 export const Container = styled.footer`
   display: flex;
@@ -13,3 +22,5 @@ export const Title = styled.h2`
   font-size: 13px;
   color: #999999;
 `
+
+export default Footer

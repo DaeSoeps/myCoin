@@ -2,7 +2,7 @@ import React from 'react'
 import logo from 'public/images/coin.png'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Container, HeadMenu, ImgMenu } from './style'
+import styled from 'styled-components'
 
 const Header = () => {
   return (
@@ -47,5 +47,44 @@ const Header = () => {
     </Container>
   )
 }
+
+export const Container = styled.div`
+  display: flex;
+  background-color: #093687;
+`
+
+export const ImgMenu = styled.div`
+  padding: 10px;
+  margin: 0px 20px;
+  cursor: pointer;
+  & a {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`
+
+export const HeadMenu = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0px 20px;
+  cursor: pointer;
+  & a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`
 
 export default Header

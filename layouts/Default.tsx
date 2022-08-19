@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
+import styled from 'styled-components'
 
 import Header from 'layouts/components/Header'
 import Footer from 'layouts/components/Footer'
-import { Container, Main } from './style'
 
 const Home: FC<any> = ({ children }) => {
   return (
@@ -13,5 +13,15 @@ const Home: FC<any> = ({ children }) => {
     </Container>
   )
 }
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
+
+export const Main = styled.div`
+  flex: 1;
+`
 
 export default Home

@@ -1,6 +1,7 @@
-import React, { ReactElement } from "react";
-import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document';
+import React, { ReactElement } from 'react'
+import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import Script from 'next/script'
 
 // https://wonit.tistory.com/369 Styled Compnent 이슈
 
@@ -10,19 +11,17 @@ import { ServerStyleSheet } from 'styled-components'
 */
 
 export default class MyDocument extends Document {
-
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-    const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
     try {
       ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: (App) => (props) =>
-          sheet.collectStyles(<App {...props} />),
-      });
+        originalRenderPage({
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+        })
 
-      const initialProps = await Document.getInitialProps(ctx);
+      const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
         styles: (
@@ -30,15 +29,14 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        ),
-      };
+        )
+      }
     } catch (error) {
-      console.error('##############', error);
+      console.error('##############', error)
     } finally {
-      sheet.seal();
+      sheet.seal()
     }
   }
-  
 
   render(): ReactElement {
     return (
@@ -50,6 +48,12 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <Script
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `if(typeof window.__REACT_DEVTOOLS_GLOBAL_HOOK__ === 'object'){ __REACT_DEVTOOLS_GLOBAL_HOOK__.inject = function() {}; }`
+            }}
+          />
         </body>
       </Html>
     )
