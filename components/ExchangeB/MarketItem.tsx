@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const MarketItem = ({ market }) => {
   return (
     <Container.root>
-      <span>{market.korean_name}</span>
+      <span>{market.trade_price}</span>
       {/* <span>{data?.trade_price}</span> */}
     </Container.root>
   )
@@ -17,6 +17,7 @@ const Container = {
 
     span {
       width: 20%;
+      height: 30px;
     }
   `
 }

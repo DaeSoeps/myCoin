@@ -4,10 +4,12 @@ import styled from 'styled-components'
 import FetchAllMarketCode from 'hooks/FetchMarketList'
 import CoinItem from 'components/ExchangeB/MarketItem'
 
+let marketList = []
+
 const MarketList = () => {
   const [marketDefineList, marketCodeList, reload] = FetchAllMarketCode()
 
-  const [marketList, setMarketList] = useState([])
+  // const [marketList, setMarketList] = useState([])
 
   useEffect(() => {
     const socket = new WebSocket('wss://api.upbit.com/websocket/v1')
@@ -40,23 +42,24 @@ const MarketList = () => {
   }, [marketCodeList])
 
   const createList = (data) => {
-    //변경 시키는 부분있어야함 새로온 데이터 vs 기존 데이터
-    const market = marketList.find((market) => {
-      // console.log('market.code: ', market.code)
-      // console.log('data.code: ', data.code)
-      return market.code === data.code
-    })
-
-    console.log('market: ', market)
-    if (market) {
-      return
+    const isMarket = marketList.map(({ code }) => code).includes(data.code)
+    if (isMarket) {
+      const result = marketList.filter(({ code }) => code !== data.code)
+      marketList = [...result, data]
+    } else {
+      marketList = [...marketList, data]
     }
-    // setMarketList((prev) => [...prev, data])
   }
 
   useEffect(() => {
     console.log('marketList: ', marketList)
   }, [marketList])
+  const [aa, setaa] = useState(false)
+  if (true) {
+    setInterval(() => {
+      setaa((prev) => !prev)
+    }, 2000)
+  }
 
   return (
     <>
