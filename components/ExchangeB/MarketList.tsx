@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
+import { useRecoilState } from 'recoil'
+import { marketListState, marketListSelector } from 'store'
 import styled from 'styled-components'
 
 import FetchAllMarketCode from 'hooks/FetchMarketList'
 import CoinItem from 'components/ExchangeB/MarketItem'
 
-// let marketList = []
+let marketList = []
 
 const MarketList = () => {
   const [marketDefineList, marketCodeList, reload] = FetchAllMarketCode()
-
-  const [marketList, setMarketList] = useState([])
+  // const [marketList, setMarketList] = useRecoilState(marketListState)
 
   useEffect(() => {
     const socket = new WebSocket('wss://api.upbit.com/websocket/v1')
@@ -42,18 +43,25 @@ const MarketList = () => {
   }, [marketCodeList])
 
   const createList = (data) => {
-    console.log('marketList: ', marketList)
-    // const isMarket = marketList.map(({ code }) => code).includes(data.code)
     const isMarket = marketList.find(({ code }) => code === data.code)
     // console.log('isMarket: ', isMarket)
     if (isMarket) {
-      const result = marketList.filter(({ code }) => code !== data.code)
-      // marketList = [...result, data]
-      // setMarketList([...result, data])
+      const result = marketList.map((market) => {
+        if (market.code === data.code) {
+          return data
+        } else {
+          return market
+        }
+      })
+      // setMarketList(result)
+      marketList = result
     } else {
-      // marketList = [...marketList, data]
-      setMarketList((prev) => [...prev, data])
+      // setMarketList((prev) => [...prev, data])
+      marketList.push(data)
     }
+    // const result = marketList.filter(({ code }) => code === data.code)
+    // console.log('result: ', result)
+    console.log('marketList: ', marketList)
   }
 
   useEffect(() => {
