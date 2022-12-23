@@ -9,7 +9,7 @@
 
 ## 💻 화면 개발
 
-- Home(메인) - 
+- Home(메인) -
 - 거래소A - SongPod
 - 거래소B - ZitNad
 - 투자내역 -
@@ -36,7 +36,7 @@
 ## 🔨 현재 개발중인 부분
 
 - SongPod : 화면 개발 - 거래소A
-- ZitNad : 
+- ZitNad :
 
 ## 📚 Tech Stack
 
@@ -59,4 +59,4 @@
 
 ## ZitNad
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sihwann)](https://github.com/sihwann/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=123)](https://github.com/123/github-readme-stats)
